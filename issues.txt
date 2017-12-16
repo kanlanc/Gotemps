@@ -1,0 +1,10 @@
+fix the links in the navbar
+
+
+
+modify index in the middleware
+
+Start from index page and move forward
+put the cards in the index.ejs
+
+Change the form action to /templates
