@@ -25,8 +25,6 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
 
-// Mongoose connection to mongo db
-
 mongoose.connect('mongodb://localhost:27017/gotemps');
 
 
@@ -43,8 +41,6 @@ app.use(session({
 }));
 
 
-// Insert the passport-local-mongoose plugin in the schema
-
 passport.use(new LocalStrategy(User.authenticate()));
 app.use(passport.initialize()); 
 app.use(passport.session()); 
@@ -60,27 +56,10 @@ app.use(function(req, res, next) {
     next();
 });
 
-
-// Seed
-
-// newTemplate={
-//     name:"Good Manners",
-//     rating:"3",
-//     preview:"https://www.hackerrank.com/domains/languages/py-introduction",
-//     category:"ethics"
-// };
-// Template.create(newTemplate,function(err,template){
-//     if(err){
-//         console.log(err);
-//     }
-//     else{
-//         console.log(template);
-//     }
-// });
-
 // Routes
 
 
+app.use("/",indexRouter); 
 app.get("/", function (req, res) {
     Template.find({}, function (err, templates) {
         if (err) { console.log(err); }
@@ -88,11 +67,10 @@ app.get("/", function (req, res) {
             res.render("templates/index", { templates: templates });
         }
     });
-
 });
- app.use("/templates",templateRouter);//change this to index route
-// app.use("/templates/:id/comments",commentRouter);
-// app.use("/templates",templateRouter); 
+app.use("/templates",templateRouter);
+app.use("/templates/:id/comments",commentRouter);
+
 
 app.listen(process.env.PORT ||3000, function () {
     console.log('Server listening on port 3000!');

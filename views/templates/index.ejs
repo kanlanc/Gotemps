@@ -20,11 +20,12 @@
                 <header>
                     <h2>Ethics and Values</h2>
                 </header>
-                
+
                 <div class="row text-center">
                     <%templates.forEach(function(template){%>
+                        <%if(template.category=="Ethics"){%>
 
-                        <div class="col-md-3 col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="thumbnail">
                                     <img src="" alt="image of the template">
                                     <div class="caption ">
@@ -32,9 +33,12 @@
                                             <%=template.name%>
                                         </h4>
                                     </div>
-                                    <p><a class="btn btn-primary" href="/templates/<%=template._id%>">More Info</a> </p>
+                                    <p>
+                                        <a class="btn btn-primary" href="/templates/<%=template._id%>">More Info</a>
+                                    </p>
                                 </div>
                             </div>
+                        <% }%>
                     <% })%>
                 </div>
 
@@ -49,8 +53,30 @@
                 <header>
                     <h2>Enviromental Sciences</h2>
                 </header>
-                <p>Add the forms in the form of thumbnails here. THe first seven and include an option of seeing all in a different
-                    page</p>
+
+
+                <div class="row text-center">
+                    <%templates.forEach(function(template){%>
+                        <%if(template.category=="Enviromental"){%>
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="thumbnail">
+                                    <img src="" alt="image of the template">
+                                    <div class="caption ">
+                                        <h4>
+                                            <%=template.name%>
+                                        </h4>
+                                    </div>
+                                    <p>
+                                        <a class="btn btn-primary" href="/templates/<%=template._id%>">More Info</a>
+                                    </p>
+                                </div>
+                            </div>
+                        <% }%>
+                    <% })%>
+                </div>
+
+
             </section>
             <br>
             <br>
@@ -59,8 +85,26 @@
                 <header>
                     <h2>English Surveys</h2>
                 </header>
-                <p>Add the forms in the form of thumbnails here. THe first seven and include an option of seeing all in a different
-                    page</p>
+                <div class="row text-center">
+                    <%templates.forEach(function(template){%>
+                        <%if(template.category=="English"){%>
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="thumbnail">
+                                    <img src="" alt="image of the template">
+                                    <div class="caption ">
+                                        <h4>
+                                            <%=template.name%>
+                                        </h4>
+                                    </div>
+                                    <p>
+                                        <a class="btn btn-primary" href="/templates/<%=template._id%>">More Info</a>
+                                    </p>
+                                </div>
+                            </div>
+                        <% }%>
+                    <% })%>
+                </div>
             </section>
 
             <br>
@@ -70,8 +114,26 @@
                 <header>
                     <h2>Club Recruitment Forms</h2>
                 </header>
-                <p>Add the forms in the form of thumbnails here. THe first seven and include an option of seeing all in a different
-                    page</p>
+                <div class="row text-center">
+                    <%templates.forEach(function(template){%>
+                        <%if(template.category=="Club_recruitment"){%>
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="thumbnail">
+                                    <img src="" alt="image of the template">
+                                    <div class="caption ">
+                                        <h4>
+                                            <%=template.name%>
+                                        </h4>
+                                    </div>
+                                    <p>
+                                        <a class="btn btn-primary" href="/templates/<%=template._id%>">More Info</a>
+                                    </p>
+                                </div>
+                            </div>
+                        <% }%>
+                    <% })%>
+                </div>
             </section>
             <br>
             <br>
@@ -80,8 +142,26 @@
                 <header>
                     <h2>NGO Recruitment forms</h2>
                 </header>
-                <p>Add the forms in the form of thumbnails here. THe first seven and include an option of seeing all in a different
-                    page</p>
+                <div class="row text-center">
+                    <%templates.forEach(function(template){%>
+                        <%if(template.category=="Ngo_recruitment"){%>
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="thumbnail">
+                                    <img src="" alt="image of the template">
+                                    <div class="caption ">
+                                        <h4>
+                                            <%=template.name%>
+                                        </h4>
+                                    </div>
+                                    <p>
+                                        <a class="btn btn-primary" href="/templates/<%=template._id%>">More Info</a>
+                                    </p>
+                                </div>
+                            </div>
+                        <% }%>
+                    <% })%>
+                </div>
             </section>
             <br>
             <br>

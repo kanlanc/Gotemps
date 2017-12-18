@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row">
 
-            <h1 style="text-align:center; magin:70px auto">Create a new google template</h1>
-            <div style="width:30%;margin:25px auto;">
+            <h1 style="text-align:center; margin:50px auto">Create a new google template</h1>
+            <div style="width:30%;margin:100px auto;">
 
             <!--Change the form action to /templates-->
                 <form action="/templates" method="POST">
@@ -18,7 +18,15 @@
                         <input class="form-control" type="text" name="template[copy]" placeholder="Enter document url for copying">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="text" name="template[category]" placeholder="Enter the category eg:-Ethics,recruitment,enviroment,english">
+                        <!-- <input class="form-control" type="text" name="template[category]" placeholder="Enter the category eg:-Ethics,recruitment,enviroment,english"> -->
+                        <select name="template[category]" class="form-control">
+                            <option value="Enviromental">Enviromental</option>
+                            <option value="Ethics">Ethics</option>
+                            <option value="English">English</option>
+                            <option value="Ngo_recruitment">NGO Recruitment</option>
+                            <option value="Club_recruitment">Club Recruitment</option>
+                          </select> 
+                    
                     </div>
                     <div class="form-group">
                         <input class="btn btn-default btn-block btn-primary" type="submit" value="Submit">
