@@ -2,10 +2,14 @@
     <div class="container">
         <div class="row">
 
-            <h1 style="text-align:center; margin:50px auto">Create a new google template</h1>
-            <div style="width:30%;margin:100px auto;">
+            <div class="col-md-12">
+                <h1 style="text-align:center; margin:50px auto">Create a new google template</h1>
+            </div>
+            <div class="col-md-6" style="margin:80px auto;"> <iframe width="420" height="315" src="https://www.youtube.com/embed/EmlbmWuKUIU?autoplay=1"></iframe></div>
+            <div class="col-md-6">
+            <div style="width:100%;margin:100px auto;">
 
-            <!--Change the form action to /templates-->
+                <!--Change the form action to /templates-->
                 <form action="/templates" method="POST">
 
                     <div class="form-group">
@@ -25,8 +29,8 @@
                             <option value="English">English</option>
                             <option value="Ngo_recruitment">NGO Recruitment</option>
                             <option value="Club_recruitment">Club Recruitment</option>
-                          </select> 
-                    
+                        </select>
+
                     </div>
                     <div class="form-group">
                         <input class="btn btn-default btn-block btn-primary" type="submit" value="Submit">
@@ -36,4 +40,5 @@
             </div>
         </div>
     </div>
-<% include ../partials/footer%>
+    </div>
+    <% include ../partials/footer%>
