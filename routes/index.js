@@ -28,18 +28,33 @@ router.get("/login",(req,res)=>{
     res.render("login",{message:req.flash("error")});
 });
 
-router.post('/login',passport.authenticate("local",{
+router.post('/login',setMessage,passport.authenticate("local",{
     successRedirect:"/templates",
-    failureRedirect:"/login"
+    failureRedirect:"/templates"
 }),function(req, res) {
+    // if(!req.user)
+    // {
+    // req.flash("error","Invalid Username or Password");
+    // res.render("templates/index");
+    // }
+    // else{
     
+    // req.flash("success","Logged In");
+    //     res.redirect("/templates");
+    // }
 });
+
 
 router.get('/logout', function(req, res) {
     req.logout();
     req.flash("success","Logged Out!!");
     res.redirect("/templates");
 });
+
+function setMessage(req,res,next){
+    req.flash("error","Invalid Username or Password");
+    next();
+}
 
 
 module.exports=router;
