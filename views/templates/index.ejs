@@ -9,7 +9,7 @@
                 <p>View our hand-picked google form templates from all over the world</p>
                 <br>
                 <p>
-                    <a class="btn btn-lg btn-primary" href="/templates/new">Add new template</a>
+                    <a class="btn btn-lg btn-primary" id="add" href="/templates/new">Add new template</a>
                 </p>
             </div>
         </header>
@@ -171,4 +171,16 @@
         </div>
 
     </div>
+
+    <script>
+
+    $("#add").click(function(){
+        console.log("damn nigger");
+        if(!currentUser){
+            console.log("damn fucker");
+            jQuery("#login_button")[0].click();
+        }
+    });
+
+    </script>
     <%include ../partials/footer%>
