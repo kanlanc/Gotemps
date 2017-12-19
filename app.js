@@ -5,6 +5,7 @@ var LocalStrategy=require("passport-local");
 var session=require('express-session');
 var methodOverride=require('method-override');
 var flash=require("connect-flash");
+require('dotenv').config();
 
 // Models
 var Template=require("./models/templates");
@@ -25,8 +26,9 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
 
-mongoose.connect('mongodb://localhost:27017/gotemps');
-// mongoose.connect('mongodb://saivicky2015:abc12345@ds161446.mlab.com:61446/gotemps');
+// mongoose.connect('mongodb://localhost:27017/gotemps');
+mongoose.connect('mongodb://'+process.env.user+':'+process.env.password+'@ds161446.mlab.com:61446/gotemps');
+
 
 
 
