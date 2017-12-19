@@ -1,9 +1,9 @@
 # Things to be done
 
 ### Make the ui better
-    -change the index.ejs format of the documents shown 
+    -change the index.ejs format that is in the index the image as image of template replace that with something better of the documents shown 
     -Make the ui for the login and sign up page 
-    -make the footer have your name and github like raj one(copy raj footer and change it)
+    
 
 
 
