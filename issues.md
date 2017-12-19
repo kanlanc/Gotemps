@@ -6,7 +6,7 @@
 
 ### Make the data option in the show.ejs file available and include the data too (use jquery)
 
-###Create mlab account
+
 
 
 ### Find a better youtube video to show how to copy a google form
