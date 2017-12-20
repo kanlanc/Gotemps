@@ -28,10 +28,10 @@ router.get("/login",(req,res)=>{
     res.render("login",{message:req.flash("error")});
 });
 
-router.post('/login',setMessage,passport.authenticate("local",{
+router.post('/login',passport.authenticate("local",{
     successRedirect:"/templates",
     failureRedirect:"/templates"
-}),function(req, res) {
+}),setMessage,function(req, res) {
     // if(!req.user)
     // {
     // req.flash("error","Invalid Username or Password");
@@ -52,7 +52,10 @@ router.get('/logout', function(req, res) {
 });
 
 function setMessage(req,res,next){
+    if(!req.user)
     req.flash("error","Invalid Username or Password");
+    else
+    req.flash("success","Welcome");
     next();
 }
 
