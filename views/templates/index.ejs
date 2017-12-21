@@ -9,7 +9,7 @@
                 <p>View our hand-picked google form templates from all over the world</p>
                 <br>
                 <p id="add">
-                    <a class="btn btn-lg btn-primary"  href="/templates/new">Add new template</a>
+                    <a class="btn btn-lg btn-primary" href="/templates/new">Add new template</a>
                 </p>
             </div>
         </header>
@@ -22,7 +22,8 @@
                 <header>
                     <h2>Ethics and Values</h2>
                 </header>
-                <br><br>
+                <br>
+                <br>
                 <div class="row text-center">
                     <%templates.forEach(function(template){%>
                         <%if(template.category=="Ethics"){%>
@@ -40,8 +41,8 @@
                                     </p>
                                 </div>
                             </div>
-                        <% }%>
-                    <% })%>
+                            <% }%>
+                                <% })%>
                 </div>
 
 
@@ -55,7 +56,8 @@
                 <header>
                     <h2>Enviromental Sciences</h2>
                 </header>
-                <br><br>
+                <br>
+                <br>
 
 
                 <div class="row text-center">
@@ -75,8 +77,8 @@
                                     </p>
                                 </div>
                             </div>
-                        <% }%>
-                    <% })%>
+                            <% }%>
+                                <% })%>
                 </div>
 
 
@@ -86,8 +88,40 @@
 
             <section>
                 <header>
-                    <h2>English Surveys</h2>
+                    <h2>Statistics</h2>
                 </header><br><br>
+                <div class="row text-center">
+                    <%templates.forEach(function(template){%>
+                        <%if(template.category=="statistics"){%>
+
+                            <div class="col-md-3 col-sm-6">
+                                <div class="thumbnail">
+                                    <!-- <img src="" alt="image of the template"> -->
+                                    <div class="caption ">
+                                        <h4>
+                                            <%=template.name%>
+                                        </h4>
+                                    </div>
+                                    <p>
+                                        <a class="btn btn-primary" href="/templates/<%=template._id%>">More Info</a>
+                                    </p>
+                                </div>
+                            </div>
+                        <% }%>
+                    <% })%>
+                </div>
+            </section>
+            <br>
+            <br>
+
+
+            
+            <section>
+                <header>
+                    <h2>English Surveys</h2>
+                </header>
+                <br>
+                <br>
                 <div class="row text-center">
                     <%templates.forEach(function(template){%>
                         <%if(template.category=="English"){%>
@@ -105,8 +139,8 @@
                                     </p>
                                 </div>
                             </div>
-                        <% }%>
-                    <% })%>
+                            <% }%>
+                                <% })%>
                 </div>
             </section>
 
@@ -116,7 +150,9 @@
             <section>
                 <header>
                     <h2>Club Recruitment Forms</h2>
-                </header><br><br>
+                </header>
+                <br>
+                <br>
                 <div class="row text-center">
                     <%templates.forEach(function(template){%>
                         <%if(template.category=="Club_recruitment"){%>
@@ -134,8 +170,8 @@
                                     </p>
                                 </div>
                             </div>
-                        <% }%>
-                    <% })%>
+                            <% }%>
+                                <% })%>
                 </div>
             </section>
             <br>
@@ -144,7 +180,9 @@
             <section>
                 <header>
                     <h2>NGO Recruitment forms</h2>
-                </header><br><br>
+                </header>
+                <br>
+                <br>
                 <div class="row text-center">
                     <%templates.forEach(function(template){%>
                         <%if(template.category=="Ngo_recruitment"){%>
@@ -162,25 +200,29 @@
                                     </p>
                                 </div>
                             </div>
-                        <% }%>
-                    <% })%>
+                            <% }%>
+                                <% })%>
                 </div>
             </section>
             <br>
             <br>
+
+
+            
+ 
         </div>
 
     </div>
 
     <script>
 
-    $("#add").click(function(){
-        console.log("damn nigger");
-        if(!currentUser){
-            console.log("damn fucker");
-            jQuery("#login_button")[0].click();
-        }
-    });
+        $("#add").click(function () {
+            console.log("damn nigger");
+            if (!currentUser) {
+                console.log("damn fucker");
+                jQuery("#login_button")[0].click();
+            }
+        });
 
     </script>
     <%include ../partials/footer%>
