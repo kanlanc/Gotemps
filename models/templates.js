@@ -6,6 +6,7 @@ var templateSchema=new mongoose.Schema({
     preview:String,
     copy:String,
     category:String,
+    dataFile:String,
     author:{
         id:{
             type:mongoose.Schema.Types.ObjectId,

@@ -12,7 +12,7 @@
             <div style="width:100%;margin:100px auto;">
 
                 <!--Change the form action to /templates-->
-                <form action="/templates" method="POST">
+                <form action="/templates" enctype="multipart/form-data"  method="POST">
 
                     <div class="form-group">
                         <input class="form-control" type="text" name="template[name]" placeholder="Enter name">
@@ -22,6 +22,10 @@
                     </div>
                     <div class="form-group">
                         <input class="form-control" type="text" name="template[copy]" placeholder="Enter document url for copying">
+                    </div>
+                    <div class="form-group">
+                            Data or Responses file
+                        <input class="form-control" name="dataFile" type="file">
                     </div>
                     <div class="form-group">
                         <!-- <input class="form-control" type="text" name="template[category]" placeholder="Enter the category eg:-Ethics,recruitment,enviroment,english"> -->
