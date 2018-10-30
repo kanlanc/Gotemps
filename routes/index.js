@@ -17,6 +17,8 @@ router.post('/register',function(req, res) {
             return res.redirect("/register");
         }
         passport.authenticate("Local")(req,res,()=>{
+            user.email=req.body.email;
+            user.save();
             req.flash("success","Welcome to Gotemps " +user.username);            
              res.redirect("/templates");
             // res.send("Registration Successfull");
